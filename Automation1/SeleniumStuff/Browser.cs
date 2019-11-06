@@ -30,7 +30,9 @@ namespace Automation1
                     return Driver;
 
                 case "2":
-                    Driver = new FirefoxDriver();
+                    FirefoxOptions options = new FirefoxOptions();
+                    options.BrowserExecutableLocation = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+                    Driver = new FirefoxDriver(options);
                     Driver.Manage().Window.Maximize();
                     return Driver;
 

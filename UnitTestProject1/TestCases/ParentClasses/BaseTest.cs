@@ -19,11 +19,10 @@ namespace UnitTestProject1
         public void InitializeBrowser()
         {
             string selection = string.Empty;
-            //Console.WriteLine("*****Activity 1*****");
-            //Console.WriteLine("Select the browser you want to run this test: 1 Chrome, 2 Firefox");
-            //Console.WriteLine("Enter the number:");
-            //selection = Console.ReadLine();
-            selection = "1";
+            Console.WriteLine("*****Activity 1*****");
+            Console.WriteLine("Select the browser you want to run this test: 1 Chrome, 2 Firefox");
+            Console.WriteLine("Enter the number:");
+            selection = Console.ReadLine();
 
             Browser.PickDriver(selection);
         }     
