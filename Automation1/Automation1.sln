@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation1", "Automation1.csproj", "{BEDD09B2-9C34-4D55-8E3F-B40CFE2C5B6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD6115D7-5E7A-402A-80E0-993C26E0C714}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\UnitTestProject1\UnitTestProject1.csproj", "{8E6C3D6F-0C3F-40A7-A473-77E92D84FDF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEDD09B2-9C34-4D55-8E3F-B40CFE2C5B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDD09B2-9C34-4D55-8E3F-B40CFE2C5B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDD09B2-9C34-4D55-8E3F-B40CFE2C5B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDD09B2-9C34-4D55-8E3F-B40CFE2C5B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6C3D6F-0C3F-40A7-A473-77E92D84FDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6C3D6F-0C3F-40A7-A473-77E92D84FDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6C3D6F-0C3F-40A7-A473-77E92D84FDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6C3D6F-0C3F-40A7-A473-77E92D84FDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4171986A-ECEA-4281-BCAD-141B4FFD65BA}
+	EndGlobalSection
+EndGlobal

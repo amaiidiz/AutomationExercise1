@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Automation1/.vs/Automation1/v15
+/Automation1/bin/Debug
+/Automation1/obj/Debug
+/Automation1/packages
+/UnitTestProject1/bin/Debug
+/UnitTestProject1/obj/Debug
+/Automation1/.vs/Automation1/DesignTimeBuild
