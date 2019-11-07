@@ -16,13 +16,21 @@ namespace UnitTestProject1
             Browser = new Browser();
         }
 
-        public void InitializeBrowser()
+        public void InitializeBrowser(bool startAsConsoleApp = false)
         {
             string selection = string.Empty;
-            Console.WriteLine("*****Activity 1*****");
-            Console.WriteLine("Select the browser you want to run this test: 1 Chrome, 2 Firefox");
-            Console.WriteLine("Enter the number:");
-            selection = Console.ReadLine();
+
+            if(startAsConsoleApp)
+            {
+                Console.WriteLine("*****Activity 1*****");
+                Console.WriteLine("Select the browser you want to run this test: 1 Chrome, 2 Firefox");
+                Console.WriteLine("Enter the number:");
+                selection = Console.ReadLine();
+            }
+            else
+            {
+                selection = "1";
+            }            
 
             Browser.PickDriver(selection);
         }     

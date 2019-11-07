@@ -5,15 +5,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Automation1.Logger;
 
 namespace UnitTestProject1
-{
-
+{   
     [TestClass]
     public class Activity1Facebook : EneidaTest
     {
+        private bool startAsConsoleApp = false;
+
+        public bool StartAsConsoleApp { get => startAsConsoleApp; set => startAsConsoleApp = value; }
+
         [TestInitialize] 
         public void BeforeEachTest()
         {
-            InitializeFramework();
+            InitializeFramework(StartAsConsoleApp);
             Pages.FacebookPage.InitElements();
         }        
 

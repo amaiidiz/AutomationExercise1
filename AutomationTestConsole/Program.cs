@@ -12,6 +12,8 @@ namespace AutomationTestConsole
         static void Main(string[] args)
         {
             Activity1Facebook mytest = new Activity1Facebook();
+            mytest.StartAsConsoleApp = true;
+
             mytest.BeforeEachTest();
             mytest.FB_ValidateMsg_EnterInfo();
             mytest.CleanUpTest();

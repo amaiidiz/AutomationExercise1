@@ -16,9 +16,9 @@ namespace UnitTestProject1
             Pages = new Pages(Browser);
         }
 
-        protected void InitializeFramework()
+        protected void InitializeFramework(bool startAsConsoleApp = false)
         {
-            InitializeBrowser();
+            InitializeBrowser(startAsConsoleApp);
             InitializePages();
         }
     }
