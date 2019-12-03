@@ -108,7 +108,6 @@ namespace Automation1
         public FacebookPage SelectBirthday(int year, int month, int day)
         {
             standardmethods = new StandardMethods(Browser);
-            standardmethods.UseExplictWaits = true;
 
             bool useStandardMethods = true;
             IWebElement ddlOptionYear = null;
@@ -145,24 +144,13 @@ namespace Automation1
                 Log.Info("");
             }
 
-            if (!standardmethods.UseExplictWaits)
-            {
-                standardmethods
-                    .Click(ddlOptionYear, "DDL Year [Option]")
-                    .Click(ddlOptionMonth, "DDL Month [Option]")
-                    .Click(ddlOptionDay, "DDL Day [Option]");                
-            } 
-            else
-            {
-                standardmethods
-                    .Click(_ddlYear, "Year [DDL]")
-                    .Click(ddlOptionYear, "DDL Year [Option]")
-                    .Click(_ddlMonth, "Month [DDL]")
-                    .Click(ddlOptionMonth, "DDL Month [Option]")
-                    .Click(_ddlDay, "Day [DDL]")
-                    .Click(ddlOptionDay, "DDL Day [Option]");
-            }
-            
+            standardmethods
+                .Click(_ddlYear, "Year [DDL]")
+                .Click(ddlOptionYear, "DDL Year [Option]")
+                .Click(_ddlMonth, "Month [DDL]")
+                .Click(ddlOptionMonth, "DDL Month [Option]")
+                .Click(_ddlDay, "Day [DDL]")
+                .Click(ddlOptionDay, "DDL Day [Option]");            
 
             Log.Info("");
             Log.Info("Selected birthday successfully");

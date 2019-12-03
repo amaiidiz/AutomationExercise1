@@ -12,10 +12,10 @@ namespace Automation1.PageObjects
 {
     public class StandardMethods : BasePage
     {
-        private bool useExplictWaits = false;
+        private bool _useExplictWaits = true;
         private WebDriverWait wait;
 
-        public bool UseExplictWaits { get => useExplictWaits; set => useExplictWaits = value; }
+        public bool UseExplictWaits { get => _useExplictWaits; set => _useExplictWaits = value; }
 
         public StandardMethods(Browser browser) : base(browser)
         {
@@ -32,38 +32,22 @@ namespace Automation1.PageObjects
             bool isDisplayed = false;
             int counter = 1;
 
-            if (!UseExplictWaits)
-            {
-                while (!isDisplayed && counter <= 10)
-                {
-                    try
-                    {
-                        // By Default will wait 1 sec each iteration
-                        Wait(WaitFactor * 1000);
-                        isDisplayed = element.Displayed;
-                    }
-                    catch (NoSuchElementException)
-                    {
-
-                    }
-                    counter++;
-                }
-                Log.AssertIsTrue(isDisplayed, "Element not found:" + elementDesc);
-            }
-            else
+            while (!isDisplayed && counter <= 10)
             {
                 try
                 {
-                    wait = new WebDriverWait(Browser.Driver, TimeSpan.FromSeconds(10 * WaitFactor));
-                    wait.Until(ExpectedConditions.ElementToBeClickable(element));
-                    Log.Info("Element is present using explicit waits: " + elementDesc);
+                    // By Default will wait 1 sec each iteration
+                    Wait(WaitFactor * 1000);
+                    isDisplayed = element.Displayed;
                 }
-                catch(WebDriverTimeoutException)
+                catch (NoSuchElementException)
                 {
-                    Log.AssertFail("Element is NOT present using explicit waits: " + elementDesc);
+
                 }
-                
+                counter++;
             }
+            Log.AssertIsTrue(isDisplayed, "Element not found:" + elementDesc);            
+            
             return this;
         }
 
@@ -136,6 +120,7 @@ namespace Automation1.PageObjects
                 {
                     wait = new WebDriverWait(Browser.Driver, TimeSpan.FromSeconds(10 * WaitFactor));
                     wait.Until(ExpectedConditions.ElementIsVisible(by));
+                    element = Browser.FindElement(by);
                     Log.Info("Element was found using Explicit waits: " + elementDesc);
                 }
                 catch(WebDriverTimeoutException)

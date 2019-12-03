@@ -23,8 +23,6 @@ namespace UnitTestProject1
         [TestCategory("SocialMedia"), Priority(1), TestMethod]
         public void FB_BirthdayDropdownTest()
         {
-            Pages.StandardMethods.UseExplictWaits = true;            
-
             Pages.FacebookPage
                 .GoTo("https://www.facebook.com/")
                 //.ValidateTitle("Facebook - Log In or Sign Up")
