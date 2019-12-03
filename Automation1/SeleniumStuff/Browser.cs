@@ -14,6 +14,8 @@ namespace Automation1
     {
         internal IWebDriver Driver { get; set; }
 
+        public string Title { get { return Driver.Title; } }
+
         public void GoTo(string url)
         {
             Driver.Navigate().GoToUrl(url);
@@ -21,7 +23,7 @@ namespace Automation1
 
         public IWebDriver PickDriver(string browserTargetString)
         {
-
+            
             switch (browserTargetString)
             {
                 case "1":
@@ -46,6 +48,12 @@ namespace Automation1
         public void EnterText(IWebElement webElement, string text)
         {
             webElement.SendKeys(text);
+        }
+
+        public IWebElement FindElement(By by)
+        {
+            IWebElement element = Driver.FindElement(by);
+            return element;
         }
 
         public void Quit()

@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestCases\Activity2Facebook.cs" />
     <Compile Include="TestCases\Activity1Facebook.cs" />
     <Compile Include="TestCases\ParentClasses\BaseTest.cs" />
     <Compile Include="TestCases\ParentClasses\EneidaTest.cs" />

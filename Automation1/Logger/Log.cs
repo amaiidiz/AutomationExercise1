@@ -18,6 +18,11 @@ namespace Automation1.Logger
             Console.WriteLine("["+timestamp+"]: " + message);
         }
 
+        public static void InfoBold(string messageHighlighted)
+        {
+            Info("<b>" + messageHighlighted + "</b>");
+        }
+
         public static void Pass()
         {
             throw new NotImplementedException();

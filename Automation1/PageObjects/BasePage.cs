@@ -11,6 +11,7 @@ namespace Automation1
     public abstract class BasePage
     {
         public Browser Browser { get; set; }
+        public string PageTitle { get { return Browser.Title; } }
 
         protected BasePage() { }
 
