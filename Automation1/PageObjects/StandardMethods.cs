@@ -12,7 +12,7 @@ namespace Automation1.PageObjects
 {
     public class StandardMethods : BasePage
     {
-        private bool _useExplictWaits = true;
+        private bool _useExplictWaits = false;
         private WebDriverWait wait;
 
         public bool UseExplictWaits { get => _useExplictWaits; set => _useExplictWaits = value; }

@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Automation1;
+using AutomationTestConsole.TestData;
 
 namespace UnitTestProject1
 {
@@ -20,6 +21,7 @@ namespace UnitTestProject1
         {
             InitializeBrowser(startAsConsoleApp);
             InitializePages();
+            Parameters.SetParameters();
         }
     }
 

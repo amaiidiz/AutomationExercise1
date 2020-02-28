@@ -17,12 +17,11 @@ namespace UnitTestProject1
             this.Browser = Browser;
         }
 
-        private FacebookPage _facebookPage;
-        public FacebookPage FacebookPage
+        private AmazonPage _amazonPage;
+        public AmazonPage AmazonPage
         {
-            get { return _facebookPage ?? (_facebookPage = new FacebookPage(Browser)); }
+            get { return _amazonPage ?? (_amazonPage = new AmazonPage(Browser)); }
         }
-
 
         private StandardMethods _standardMethods;
         public StandardMethods StandardMethods
